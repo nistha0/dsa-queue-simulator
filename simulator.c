@@ -1,3 +1,8 @@
+typedef struct {
+    int id;
+    char lane[4];
+} Vehicle;
+
 #include <stdio.h>
 #include "queue.h"
 
