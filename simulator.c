@@ -5,6 +5,12 @@ typedef struct {
 
 #include <stdio.h>
 #include "queue.h"
+int countVehicles(Queue *q) {
+    if (isEmpty(q))
+        return 0;
+    return q->rear - q->front + 1;
+}
+
 
 int main() {
     Queue AL2, BL2, CL2, DL2;
@@ -28,6 +34,11 @@ int main() {
     enqueue(&testQueue, 101);
     enqueue(&testQueue, 102);
     enqueue(&testQueue, 103);
+    
+    printf("AL2 vehicles: %d\n", countVehicles(&AL2));
+    printf("BL2 vehicles: %d\n", countVehicles(&BL2));
+    printf("CL2 vehicles: %d\n", countVehicles(&CL2));
+    printf("DL2 vehicles: %d\n", countVehicles(&DL2));
 
     printf("\nVehicles passing the junction:\n");
     while (!isEmpty(&testQueue)) {
