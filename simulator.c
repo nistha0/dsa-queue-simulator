@@ -15,10 +15,11 @@ int countVehicles(Queue *q) {
 int main() {
     Queue AL2, BL2, CL2, DL2;
 
-     initQueue(&AL2);
-     initQueue(&BL2);
-     initQueue(&CL2);
-     initQueue(&DL2);
+     Queue *lanes[] = {&AL2, &BL2, &CL2, &DL2};
+
+for (int i = 0; i < 4; i++) {
+    initQueue(lanes[i]);
+}
 
 
     initQueue(&testQueue);
@@ -34,7 +35,7 @@ int main() {
     enqueue(&testQueue, 101);
     enqueue(&testQueue, 102);
     enqueue(&testQueue, 103);
-    
+
     printf("AL2 vehicles: %d\n", countVehicles(&AL2));
     printf("BL2 vehicles: %d\n", countVehicles(&BL2));
     printf("CL2 vehicles: %d\n", countVehicles(&CL2));
