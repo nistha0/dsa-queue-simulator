@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "queue.h"
 
-
 int main() {
     Queue testQueue;
 
@@ -12,12 +11,13 @@ int main() {
     enqueue(&testQueue, 102);
     enqueue(&testQueue, 103);
 
-    printf("Removing vehicles from queue...\n");
+    printf("\nVehicles passing the junction:\n");
     while (!isEmpty(&testQueue)) {
         int vehicle = dequeue(&testQueue);
-        printf("Vehicle %d passed the junction\n", vehicle);
+        printf("Vehicle %d passed\n", vehicle);
     }
 
     return 0;
 }
+
 
