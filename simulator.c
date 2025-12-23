@@ -7,7 +7,13 @@ typedef struct {
 #include "queue.h"
 
 int main() {
-    Queue testQueue;
+    Queue AL2, BL2, CL2, DL2;
+
+     initQueue(&AL2);
+     initQueue(&BL2);
+     initQueue(&CL2);
+     initQueue(&DL2);
+
 
     initQueue(&testQueue);
 
