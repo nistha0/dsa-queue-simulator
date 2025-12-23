@@ -16,6 +16,13 @@ int main() {
 
 
     initQueue(&testQueue);
+    enqueue(&AL2, 201);
+    enqueue(&AL2, 202);
+
+    enqueue(&BL2, 301);
+    enqueue(&CL2, 401);
+    enqueue(&DL2, 501);
+
 
     printf("Adding vehicles to queue...\n");
     enqueue(&testQueue, 101);
