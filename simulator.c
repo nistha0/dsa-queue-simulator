@@ -56,7 +56,15 @@ for (int i = 0; i < 4; i++) {
     while (countVehicles(&AL2) >= 5) {
         serveLane(&AL2, "AL2");
     }
+}if (countVehicles(&AL2) < 5) {
+    printf("\nPriority cleared. Returning to normal traffic.\n");
+
+    serveLane(&AL2, "AL2");
+    serveLane(&BL2, "BL2");
+    serveLane(&CL2, "CL2");
+    serveLane(&DL2, "DL2");
 }
+
 
 
 
