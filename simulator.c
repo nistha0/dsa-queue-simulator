@@ -46,6 +46,10 @@ for (int i = 0; i < 4; i++) {
     printf("BL2 vehicles: %d\n", countVehicles(&BL2));
     printf("CL2 vehicles: %d\n", countVehicles(&CL2));
     printf("DL2 vehicles: %d\n", countVehicles(&DL2));
+    
+    int al2Count = countVehicles(&AL2);
+    printf("\nChecking priority lane condition...\n");
+    printf("AL2 vehicle count: %d\n", al2Count);
 
     printf("\nVehicles passing the junction:\n");
     while (!isEmpty(&testQueue)) {
