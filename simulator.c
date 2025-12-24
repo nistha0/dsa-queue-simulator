@@ -10,6 +10,12 @@ int countVehicles(Queue *q) {
         return 0;
     return q->rear - q->front + 1;
 }
+void serveLane(Queue *lane, char *laneName) {
+    if (!isEmpty(lane)) {
+        int vehicle = dequeue(lane);
+        printf("Vehicle %d served from %s\n", vehicle, laneName);
+    }
+}
 
 
 int main() {
@@ -46,6 +52,13 @@ for (int i = 0; i < 4; i++) {
         int vehicle = dequeue(&testQueue);
         printf("Vehicle %d passed\n", vehicle);
     }
+    printf("\nNormal traffic condition:\n");
+
+    serveLane(&AL2, "AL2");
+    serveLane(&BL2, "BL2");
+    serveLane(&CL2, "CL2");
+    serveLane(&DL2, "DL2");
+
 
     return 0;
 }
