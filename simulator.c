@@ -51,8 +51,13 @@ for (int i = 0; i < 4; i++) {
     printf("\nChecking priority lane condition...\n");
     printf("AL2 vehicle count: %d\n", al2Count);
     if (al2Count > 10) {
-    printf("Priority condition activated for AL2\n");
+    printf("\nServing priority lane AL2...\n");
+
+    while (countVehicles(&AL2) >= 5) {
+        serveLane(&AL2, "AL2");
+    }
 }
+
 
 
     printf("\nVehicles passing the junction:\n");
