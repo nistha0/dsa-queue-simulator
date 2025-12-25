@@ -17,10 +17,12 @@ int main() {
         return 1;
     }
 
+    for (int i = 0; i < 3; i++) {
     fprintf(fa, "%d\n", rand() % 1000);
     fprintf(fb, "%d\n", rand() % 1000);
     fprintf(fc, "%d\n", rand() % 1000);
     fprintf(fd, "%d\n", rand() % 1000);
+}
 
     fclose(fa);
     fclose(fb);
