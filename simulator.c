@@ -16,6 +16,20 @@ void serveLane(Queue *lane, char *laneName) {
         printf("Vehicle %d served from %s\n", vehicle, laneName);
     }
 }
+void loadLaneFromFile(char *filename, Queue *lane) {
+    FILE *fp = fopen(filename, "r");
+    int vehicle;
+
+    if (!fp)
+        return;
+
+    while (fscanf(fp, "%d", &vehicle) != EOF) {
+        enqueue(lane, vehicle);
+    }
+
+    fclose(fp);
+}
+
 
 
 int main() {
@@ -35,6 +49,11 @@ for (int i = 0; i < 4; i++) {
     enqueue(&BL2, 301);
     enqueue(&CL2, 401);
     enqueue(&DL2, 501);
+
+    loadLaneFromFile("laneA.txt", &AL2);
+    loadLaneFromFile("laneB.txt", &BL2);
+    loadLaneFromFile("laneC.txt", &CL2);
+    loadLaneFromFile("laneD.txt", &DL2);
 
 
     printf("Adding vehicles to queue...\n");
