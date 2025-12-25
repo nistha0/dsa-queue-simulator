@@ -19,9 +19,12 @@ void serveLane(Queue *lane, char *laneName) {
 void loadLaneFromFile(char *filename, Queue *lane) {
     FILE *fp = fopen(filename, "r");
     int vehicle;
+    
+      if (!fp) {
+    printf("Could not open %s\n", filename);
+    return;
+}
 
-    if (!fp)
-        return;
 
     while (fscanf(fp, "%d", &vehicle) != EOF) {
         enqueue(lane, vehicle);
