@@ -42,3 +42,4 @@ The performance of the traffic management system depends on basic queue operatio
   If there are *n* vehicles in a lane, serving all of them takes **O(n)** time.
 
 Overall, the system efficiently manages traffic using simple and constant-time queue operations.
+This project uses a queue data structure.
