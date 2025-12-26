@@ -24,3 +24,21 @@ Once the count goes below the threshold, the system exits priority mode and resu
 |---------------|----------------|---------|
 | Queue | Array-based queue | To store and manage vehicles waiting in each lane |
 | Vehicle | Structure (id, lane) | Represents individual vehicles in the traffic system |
+
+## Time Complexity Analysis
+
+The performance of the traffic management system depends on basic queue operations.
+
+- **Enqueue operation:**  
+  The enqueue operation inserts a vehicle at the rear of the queue.  
+  Since this is a direct insertion, its time complexity is **O(1)**.
+
+- **Dequeue operation:**  
+  The dequeue operation removes a vehicle from the front of the queue.  
+  This operation also takes constant time, so its time complexity is **O(1)**.
+
+- **Traffic serving loop:**  
+  During traffic processing, vehicles are served one by one from the queues.  
+  If there are *n* vehicles in a lane, serving all of them takes **O(n)** time.
+
+Overall, the system efficiently manages traffic using simple and constant-time queue operations.
