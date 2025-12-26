@@ -18,3 +18,9 @@ When the number of vehicles waiting in AL2 exceeds 10, the system switches to pr
 In priority mode, vehicles from AL2 are served continuously until the number of vehicles in AL2 drops below 5.  
 Once the count goes below the threshold, the system exits priority mode and resumes normal traffic operation.
 
+## Data Structures Used
+
+| Data Structure | Implementation | Purpose |
+|---------------|----------------|---------|
+| Queue | Array-based queue | To store and manage vehicles waiting in each lane |
+| Vehicle | Structure (id, lane) | Represents individual vehicles in the traffic system |
